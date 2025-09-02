@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import djHero from "@/assets/dj-hero.jpg";
+import djHero from "@/assets/dj-sean-hero.jpg";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
