@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'neon-blue': 'hsl(var(--neon-blue))',
+				'neon-purple': 'hsl(var(--neon-purple))',
+				'neon-pink': 'hsl(var(--neon-pink))',
+				'electric-cyan': 'hsl(var(--electric-cyan))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +66,20 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-accent': 'var(--gradient-accent)',
+			},
+			boxShadow: {
+				'glow-primary': 'var(--glow-primary)',
+				'glow-secondary': 'var(--glow-secondary)',
+				'glow-accent': 'var(--glow-accent)',
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
