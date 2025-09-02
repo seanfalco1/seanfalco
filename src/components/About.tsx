@@ -1,25 +1,15 @@
 const About = () => {
-  return (
-    <section className="py-20 px-4">
+  return <section className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-secondary bg-clip-text text-transparent">
-            About DJ Nexus
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-secondary bg-clip-text text-transparent">About Sean Falco</h2>
           <div className="w-24 h-1 bg-gradient-secondary mx-auto mb-8 shadow-glow-secondary"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              With over a decade of experience in the electronic music scene, DJ Nexus has become 
-              synonymous with innovation and energy. From underground clubs to massive festivals, 
-              every performance is a journey through sound that transcends boundaries.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Specializing in progressive house, techno, and experimental electronic music, 
-              DJ Nexus creates immersive experiences that connect with audiences on a deeper level.
-            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">With over a decade of experience in the electronic music scene, Sean Falco has become synonymous with innovation and energy. From underground clubs to massive festivals, every performance is a journey through sound that transcends boundaries.</p>
+            <p className="text-lg text-muted-foreground leading-relaxed">Specializing in progressive house, techno, and experimental electronic music, Sean Falco creates immersive experiences that connect with audiences on a deeper level.</p>
             
             <div className="grid grid-cols-2 gap-6 mt-8">
               <div className="text-center p-6 bg-card border border-border rounded-lg">
@@ -46,8 +36,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
