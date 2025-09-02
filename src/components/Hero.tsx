@@ -1,13 +1,9 @@
 import { Button } from "@/components/ui/button";
-import djHero from "@/assets/dj-sean-hero.jpg";
+import djHero from "@/assets/dj-hero.jpg";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${djHero})`
-    }}>
-        <div className="absolute inset-0 bg-background/80"></div>
-      </div>
+      
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
