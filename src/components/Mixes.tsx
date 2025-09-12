@@ -5,7 +5,7 @@ import { Play, Calendar, Clock } from "lucide-react";
 const mixes = [
   {
     id: 1,
-    title: "Neon Nights Vol. 3",
+    title: "Launch",
     duration: "68:42",
     date: "2024-01-15",
     genre: "Progressive House",
@@ -13,18 +13,18 @@ const mixes = [
   },
   {
     id: 2,
-    title: "Underground Frequencies",
+    title: "Evolve",
     duration: "72:18",
     date: "2024-01-08", 
-    genre: "Techno",
+    genre: "Progressive House",
     plays: "22.8K"
   },
   {
     id: 3,
-    title: "Cosmic Journey",
+    title: "Phase",
     duration: "85:33",
     date: "2023-12-22",
-    genre: "Trance",
+    genre: "Progressive House",
     plays: "31.5K"
   }
 ];
