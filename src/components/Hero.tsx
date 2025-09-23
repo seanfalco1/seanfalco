@@ -6,7 +6,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${djHero})`,
+          backgroundImage: `url(${djBackground})`,
         }}
       />
       <div className="absolute inset-0 bg-black/40" />
