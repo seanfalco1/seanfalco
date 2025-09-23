@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">Sean Falco</h1>
+          <h1 className="text-6xl md:text-8xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">SF</h1>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6 shadow-glow-primary"></div>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Elevating dance floors worldwide with cutting-edge electronic beats and unforgettable experiences
