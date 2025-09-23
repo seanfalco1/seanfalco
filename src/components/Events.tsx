@@ -5,32 +5,32 @@ import { Calendar, MapPin, Clock, Users } from "lucide-react";
 const events = [
   {
     id: 1,
-    title: "Neon Festival 2024",
-    venue: "Electric Arena",
-    city: "Miami, FL",
-    date: "2024-03-15",
-    time: "22:00",
-    capacity: "5,000",
+    title: "Falcoholics Anonymous",
+    venue: "Zebbie's Garden",
+    city: "Washington, DC",
+    date: "2025-11-15",
+    time: "23:00",
+    capacity: "500",
     status: "upcoming"
   },
   {
     id: 2,
-    title: "Underground Sessions",
-    venue: "The Warehouse",
-    city: "Berlin, Germany", 
-    date: "2024-03-28",
-    time: "23:30",
-    capacity: "1,200",
+    title: "Vera Nights",
+    venue: "Vera",
+    city: "Washington, DC", 
+    date: "2025-12-06",
+    time: "23:00",
+    capacity: "500",
     status: "upcoming"
   },
   {
     id: 3,
-    title: "Sunset Vibes",
-    venue: "Rooftop Lounge",
-    city: "Ibiza, Spain",
-    date: "2024-04-10",
-    time: "19:00",
-    capacity: "800",
+    title: "Falcoholics Anonymous",
+    venue: "Zebbie's Garden",
+    city: "Washington, DC",
+    date: "2025-12-20",
+    time: "23:00",
+    capacity: "500",
     status: "upcoming"
   }
 ];
