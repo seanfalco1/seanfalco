@@ -1,31 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play, Calendar, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 
 const mixes = [
   {
     id: 1,
-    title: "Launch",
-    duration: "68:42",
-    date: "2024-01-15",
-    genre: "Progressive House",
-    plays: "15.2K"
+    title: "Presidential",
+    duration: "1:04:03",
+    mixcloudUrl: "https://www.mixcloud.com/seanfalco/sean-falco-presidential/",
+    thumbnail: "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/d/1/f/5/bf01-2d79-4134-9418-f366a738b1e0",
+    genre: "Progressive EDM / Electro House",
+    date: "2025-01-20"
   },
   {
     id: 2,
-    title: "Evolve",
-    duration: "72:18",
-    date: "2024-01-08", 
-    genre: "Progressive House",
-    plays: "22.8K"
+    title: "Dragon",
+    duration: "1:05:16",
+    mixcloudUrl: "https://www.mixcloud.com/seanfalco/sean-falco-dragon/",
+    thumbnail: "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/6/f/f/f/6cc7-06dd-4963-93c3-6685badb61b1",
+    genre: "Progressive EDM / House",
+    date: "2025-01-20"
   },
   {
     id: 3,
-    title: "Phase",
-    duration: "85:33",
-    date: "2023-12-22",
-    genre: "Progressive House",
-    plays: "31.5K"
+    title: "Helios",
+    duration: "1:08:16",
+    mixcloudUrl: "https://www.mixcloud.com/seanfalco/sean-falco-helios/",
+    thumbnail: "https://thumbnailer.mixcloud.com/unsafe/300x300/extaudio/d/e/4/6/32e5-9d9e-4fea-9dfb-525da3011de2",
+    genre: "Progressive EDM / Trance",
+    date: "2025-01-20"
   }
 ];
 
@@ -45,39 +48,54 @@ const Mixes = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {mixes.map((mix) => (
-            <Card key={mix.id} className="bg-card border-border hover:border-neon-blue transition-colors duration-300 group">
-              <CardContent className="p-6">
-                <div className="aspect-square bg-gradient-primary rounded-lg mb-4 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-background/20 flex items-center justify-center group-hover:bg-background/10 transition-colors duration-300">
-                    <Button 
-                      size="icon" 
-                      className="w-16 h-16 bg-background/20 hover:bg-background/30 text-foreground border-0 shadow-glow-primary transform group-hover:scale-110 transition-all duration-300"
-                    >
-                      <Play className="w-6 h-6 ml-1" />
-                    </Button>
-                  </div>
+            <Card key={mix.id} className="bg-card border-border hover:border-neon-blue transition-colors duration-300 group overflow-hidden">
+              <CardContent className="p-0">
+                {/* Mixcloud Embed */}
+                <div className="relative">
+                  <iframe
+                    width="100%"
+                    height="120"
+                    src={`https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=${encodeURIComponent(mix.mixcloudUrl)}`}
+                    frameBorder="0"
+                    className="w-full"
+                    title={mix.title}
+                  />
+                </div>
+
+                {/* Thumbnail */}
+                <div className="aspect-square relative overflow-hidden">
+                  <img 
+                    src={mix.thumbnail} 
+                    alt={mix.title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 
-                <h3 className="font-bold text-lg mb-2 group-hover:text-neon-blue transition-colors duration-300">
-                  {mix.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-3">{mix.genre}</p>
-                
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                  <div className="flex items-center gap-1">
-                    <Clock className="w-4 h-4" />
-                    {mix.duration}
+                {/* Mix Info */}
+                <div className="p-6">
+                  <h3 className="font-bold text-lg mb-2 group-hover:text-neon-blue transition-colors duration-300">
+                    {mix.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3">{mix.genre}</p>
+                  
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {mix.duration}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-4 h-4" />
+                      {new Date(mix.date).toLocaleDateString()}
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {new Date(mix.date).toLocaleDateString()}
-                  </div>
-                </div>
-                
-                <div className="flex justify-between items-center">
-                  <span className="text-neon-blue font-semibold">{mix.plays} plays</span>
-                  <Button variant="ghost" size="sm" className="hover:text-neon-blue">
-                    Download
+                  
+                  <Button 
+                    variant="outline"
+                    size="sm" 
+                    className="w-full border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-background"
+                    onClick={() => window.open(mix.mixcloudUrl, '_blank')}
+                  >
+                    View on Mixcloud
                   </Button>
                 </div>
               </CardContent>
@@ -90,8 +108,9 @@ const Mixes = () => {
             variant="outline"
             size="lg"
             className="border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-background font-semibold px-8 py-6 transition-all duration-300"
+            onClick={() => window.open('https://www.mixcloud.com/seanfalco/', '_blank')}
           >
-            View All Mixes
+            View All Mixes on Mixcloud
           </Button>
         </div>
       </div>
