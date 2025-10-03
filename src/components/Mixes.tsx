@@ -50,24 +50,16 @@ const Mixes = () => {
           {mixes.map((mix) => (
             <Card key={mix.id} className="bg-card border-border hover:border-neon-blue transition-colors duration-300 group overflow-hidden">
               <CardContent className="p-0">
-                {/* Mixcloud Embed */}
+                {/* Mixcloud Embed Player */}
                 <div className="relative">
                   <iframe
                     width="100%"
-                    height="120"
-                    src={`https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&feed=${encodeURIComponent(mix.mixcloudUrl)}`}
+                    height="180"
+                    src={`https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=${encodeURIComponent(mix.mixcloudUrl)}`}
                     frameBorder="0"
                     className="w-full"
                     title={mix.title}
-                  />
-                </div>
-
-                {/* Thumbnail */}
-                <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src={mix.thumbnail} 
-                    alt={mix.title}
-                    className="w-full h-full object-cover"
+                    allow="autoplay"
                   />
                 </div>
                 
