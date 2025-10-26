@@ -6,7 +6,6 @@ const Hero = () => {
     <section className="relative flex flex-col items-center justify-center overflow-hidden">
       {/* Grey Sean Falco Image */}
       <div className="w-full relative -mt-8 md:-mt-24 lg:-mt-32">
-        {/* Negative top margin shifts the image upward on larger screens */}
         <img
           src={djHero}
           alt="Sean Falco Logo"
@@ -16,7 +15,8 @@ const Hero = () => {
       </div>
 
       {/* Content BELOW the image */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-6 mb-24">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 mb-24 md:mt-6 lg:mt-4">
+        {/* ↓ reduced mt values to pull content upward */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Elevating dance floors worldwide with cutting-edge electronic beats and unforgettable experiences
         </p>
