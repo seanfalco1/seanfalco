@@ -3,9 +3,9 @@ import djHero from "@/assets/logo.png";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col items-center justify-start overflow-hidden w-full">
+    <section className="relative flex flex-col items-center justify-center overflow-hidden">
       {/* Grey Sean Falco Image */}
-      <div className="w-full relative">
+      <div className="w-full relative -mt-8 md:-mt-24 lg:-mt-32">
         <img
           src={djHero}
           alt="Sean Falco Logo"
@@ -15,8 +15,8 @@ const Hero = () => {
       </div>
 
       {/* Content BELOW the image */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-4">
-        {/* tiny margin for a small separation */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-2 md:mt-2 lg:mt-2">
+        {/* Tiny margin so text/buttons just touch the bottom of the image */}
         <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto">
           Elevating dance floors worldwide with cutting-edge electronic beats and unforgettable experiences
         </p>
