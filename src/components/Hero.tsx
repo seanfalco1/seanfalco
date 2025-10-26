@@ -3,42 +3,37 @@ import djHero from "@/assets/logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${djHero})`,
-        }}
-      />
-      <div className="absolute inset-0 bg-black/40" />
+    <section className="relative flex flex-col items-center justify-center overflow-hidden">
+      {/* Grey Sean Falco Image */}
+      <div className="w-full relative">
+        <img
+          src={djHero}
+          alt="Sean Falco Logo"
+          className="w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
 
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center justify-end">
-        {/* Removed "SF" */}
-        
-        {/* Grey Sean Falco image area already in bg */}
-        {/* Now tagline and buttons appear lower */}
-        <div className="mt-[50vh]"> {/* adjust this value as needed */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Elevating dance floors worldwide with cutting-edge electronic beats and unforgettable experiences
-          </p>
+      {/* Content BELOW the image */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16 mb-24">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          Elevating dance floors worldwide with cutting-edge electronic beats and unforgettable experiences
+        </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-gradient-primary text-primary-foreground font-semibold px-8 py-6 text-lg shadow-glow-primary hover:shadow-glow-secondary transition-all duration-300 transform hover:scale-105"
-            >
-              Book Now
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-background font-semibold px-8 py-6 text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Latest Mixes
-            </Button>
-          </div>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button
+            size="lg"
+            className="bg-gradient-primary text-primary-foreground font-semibold px-8 py-6 text-lg shadow-glow-primary hover:shadow-glow-secondary transition-all duration-300 transform hover:scale-105"
+          >
+            Book Now
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-background font-semibold px-8 py-6 text-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Latest Mixes
+          </Button>
         </div>
       </div>
 
