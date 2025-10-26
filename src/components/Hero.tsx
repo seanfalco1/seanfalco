@@ -5,7 +5,8 @@ const Hero = () => {
   return (
     <section className="relative flex flex-col items-center justify-center overflow-hidden">
       {/* Grey Sean Falco Image */}
-      <div className="w-full relative">
+      <div className="w-full relative -mt-8 md:-mt-24 lg:-mt-32">
+        {/* Negative top margin shifts the image upward on larger screens */}
         <img
           src={djHero}
           alt="Sean Falco Logo"
