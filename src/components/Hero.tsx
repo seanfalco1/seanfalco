@@ -15,9 +15,9 @@ const Hero = () => {
       </div>
 
       {/* Content BELOW the image */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-8 mb-24 md:mt-6 lg:mt-4">
-        {/* ↓ reduced mt values to pull content upward */}
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-2 md:mt-2 lg:mt-2">
+        {/* Tiny margin so text/buttons just touch the bottom of the image */}
+        <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto">
           Elevating dance floors worldwide with cutting-edge electronic beats and unforgettable experiences
         </p>
 
