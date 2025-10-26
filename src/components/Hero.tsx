@@ -1,12 +1,33 @@
+import { useRef, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import djHero from "@/assets/logo.png";
 
 const Hero = () => {
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [imgHeight, setImgHeight] = useState(0);
+
+  // Update image height on load and window resize
+  useEffect(() => {
+    const updateHeight = () => {
+      if (imgRef.current) {
+        setImgHeight(imgRef.current.clientHeight);
+      }
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
+  }, []);
+
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden">
+    <section className="flex flex-col items-center justify-start overflow-hidden w-full relative">
       {/* Grey Sean Falco Image */}
-      <div className="w-full relative -mt-8 md:-mt-24 lg:-mt-32">
+      <div className="w-full relative">
         <img
+          ref={imgRef}
           src={djHero}
           alt="Sean Falco Logo"
           className="w-full object-cover"
@@ -15,8 +36,7 @@ const Hero = () => {
       </div>
 
       {/* Content BELOW the image */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-2 md:mt-2 lg:mt-2">
-        {/* Tiny margin so text/buttons just touch the bottom of the image */}
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-4">
         <p className="text-xl md:text-2xl text-muted-foreground mb-6 max-w-2xl mx-auto">
           Elevating dance floors worldwide with cutting-edge electronic beats and unforgettable experiences
         </p>
@@ -38,10 +58,23 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-4 h-4 bg-neon-blue rounded-full shadow-glow-primary animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-6 h-6 bg-neon-purple rounded-full shadow-glow-secondary animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 right-20 w-3 h-3 bg-electric-cyan rounded-full shadow-glow-accent animate-pulse delay-500"></div>
+      {/* Floating Elements (Dynamic) */}
+      {imgHeight > 0 && (
+        <>
+          <div
+            className="absolute w-4 h-4 bg-neon-blue rounded-full shadow-glow-primary animate-pulse"
+            style={{ top: imgHeight * 0.1, left: "5%" }}
+          />
+          <div
+            className="absolute w-6 h-6 bg-neon-purple rounded-full shadow-glow-secondary animate-pulse"
+            style={{ bottom: imgHeight * 0.1, right: "5%" }}
+          />
+          <div
+            className="absolute w-3 h-3 bg-electric-cyan rounded-full shadow-glow-accent animate-pulse"
+            style={{ top: imgHeight * 0.5, right: "15%" }}
+          />
+        </>
+      )}
     </section>
   );
 };
